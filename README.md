@@ -21,6 +21,4 @@ Copy only missing config files:
 rsync -av --ignore-existing ~/dotfiles/.config/ ~/.config/
 ```
 
-This will add new configs without overwriting existing files.
-
-```
+This will add new configs without overwriting existing files.    
