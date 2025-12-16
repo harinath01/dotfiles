@@ -24,6 +24,3 @@ rsync -av --ignore-existing ~/dotfiles/.config/ ~/.config/
 This will add new configs without overwriting existing files.
 
 ```
-
-If you want it even shorter (one-liner style), say so.
-```
