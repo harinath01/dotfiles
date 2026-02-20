@@ -29,7 +29,7 @@ windows:
           - ssh-add
 
   - window_name: Terminal
-    start_directory: ~/workspace/testpress/testpress_python
+    start_directory: ~/workspace/testpress/testpress_python/testpress
     panes:
       - zsh
 
