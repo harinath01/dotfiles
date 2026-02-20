@@ -28,6 +28,11 @@ windows:
           - eval "$(ssh-agent -s)"
           - ssh-add
 
+  - window_name: Terminal
+    start_directory: ~/workspace/testpress/testpress_python
+    panes:
+      - zsh
+
   - window_name: serverAccess
     start_directory: ~/workspace/testpress/testpress_python
     panes:
