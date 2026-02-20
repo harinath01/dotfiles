@@ -1,0 +1,34 @@
+session_name: testpress
+start_directory: ~/workspace/testpress/testpress_python
+
+windows:
+
+  - window_name: backend
+    start_directory: ~/workspace/testpress/testpress_python/testpress
+    layout: even-horizontal
+    panes:
+      - shell_command:
+          - source ~/workspace/testpress/bin/activate
+          - ./manage.py runserver
+      - shell_command:
+          - source ~/workspace/testpress/bin/activate
+          - celery worker -A testpress.local_celery --loglevel=info
+
+  - window_name: dbShell
+    start_directory: ~/workspace/testpress/testpress_python/testpress
+    panes:
+      - shell_command:
+          - source ~/workspace/testpress/bin/activate
+          - ./manage.py shell_plus
+
+  - window_name: scripts
+    start_directory: ~/workspace/testpress/testpress_python/scripts
+    panes:
+      - shell_command:
+          - eval "$(ssh-agent -s)"
+          - ssh-add
+
+  - window_name: serverAccess
+    start_directory: ~/workspace/testpress/testpress_python
+    panes:
+      - zsh
